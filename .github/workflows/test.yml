@@ -1,0 +1,16 @@
+name: Testing date function
+
+on:
+  workflow_dispatch
+
+jobs:
+  output-date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: output date
+        run: |
+          echo "$date"
+
+        
+  
+  
