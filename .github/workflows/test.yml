@@ -7,9 +7,13 @@ jobs:
   output-date:
     runs-on: ubuntu-latest
     steps:
-      - name: output date
+      - name: get-date
+        id: date
+        run: echo "::set-output name=date::$(date)"
+        
+      - name: output-date
         run: |
-          echo "$date"
+          echo "${{ steps.date.outputs.date }}"
 
         
   
